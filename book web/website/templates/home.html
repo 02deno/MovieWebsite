@@ -1,0 +1,55 @@
+{% extends "base.html" %} {% block title %}My Movies{% endblock %}
+
+{% block content %}
+
+<form class="form-inline justify-content-center mt-5 my-lg-0" method="post" action="{{url_for('views.search')}}">
+    
+    <input class="form-control mr-sm-2" type="search" placeholder="Search by content" aria-label="Search" name="searched" >
+    <button class="btn btn-outline-dark my-2 my-sm-0 text-light" type="submit">Search</button>
+
+</form>
+
+<h1 align ="center">Filmler</h1>
+<ul style="color:black;" class="list-group list-group-flush m-auto p-auto" id="films">
+    
+    {% for films in user.films%}
+    <br>
+    <li style="border:1px solid black;" class="list-group-item">
+        <h6> {{films.date}} </h6>
+        <div class="container d-inline-flex p-2 flex-row d-flex">
+            
+            <div class="container">
+                <img style="height: 250px; width:250px;"  src="static/images/{{films.image_name}}" alt="Image" class="img-thumbnail">
+            </div>
+            <div class="container">
+        
+                <h3>{{films.movieName}}</h3>
+                <h4>by {{films.directorName}}</h4>
+                <h5> {{films.rate}}<i class="fa-solid fa-star"></i></h5>
+                <p>
+                    {{films.movieText}}
+                </p>
+            </div>
+        </div>
+        
+        
+        
+        
+
+        
+        
+       
+
+        <button type="button" class="close" onclick="deleteFilm({{ films.id }})">
+            <span aria-hidden="true">&times</span>
+        </button>
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
+
+<!--
+    bütün ekledikleri filmler resimleri,isim,puan,yönetmen,tarihi ve kullanıcı notlarıyla burda olsun
+
+-->
