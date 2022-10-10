@@ -28,3 +28,7 @@ Homepage :
 
 
 ![Ekran Resmi 2022-10-10 23 12 54](https://user-images.githubusercontent.com/103145955/194945214-85589bc8-b4ee-4757-ac95-f45b14a3be9b.png)
+
+
+![Ekran Resmi 2022-10-10 23 16 53](https://user-images.githubusercontent.com/103145955/194945588-02b07c57-6ed4-4ef6-8f76-57a3cbe34a57.png)
+
